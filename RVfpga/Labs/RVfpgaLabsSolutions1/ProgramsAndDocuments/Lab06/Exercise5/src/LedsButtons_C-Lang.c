@@ -1,0 +1,34 @@
+#define GPIO_SWs    0x80001400
+#define GPIO_LEDs   0x80001404
+#define GPIO_INOUT  0x80001408
+
+#define GPIO2_BTNs  0x80001800
+#define GPIO2_INOUT 0x80001808
+
+#define READ_GPIO(dir) (*(volatile unsigned *)dir)
+#define WRITE_GPIO(dir, value) { (*(volatile unsigned *)dir) = (value); }
+
+int main ( void )
+{
+    int i, count=0, buttons2_value, leds_value, delay;
+
+    WRITE_GPIO(GPIO_INOUT, 0xFFFF);
+    WRITE_GPIO(GPIO2_INOUT, 0x0);
+
+    while (1) { 
+        buttons2_value = READ_GPIO(GPIO2_BTNs);
+
+        if (buttons2_value & 0x1) delay = 1000000;
+        else delay = 10000000;
+
+        if (buttons2_value & 0x2) count = 0;
+
+        count++;
+
+		WRITE_GPIO(GPIO_LEDs, count);
+
+		for (i=0; i<delay; i++);
+    }
+
+    return(0);
+}
