@@ -12,30 +12,40 @@
     (*(volatile unsigned *)dir) = (value); \
   }
 
+
 int main(void)
 {
-  int En_Value = 0xFFFF, i, j, k, vActual, hex_integer;
-
+  int En_Value = 0xFFFF;
   WRITE_GPIO(GPIO_INOUT, En_Value);
 
-  WRITE_GPIO(GPIO_LEDs, 0xFFFF); // display switch value on LEDs
+  int valor;
+  int num1, num2 = 0;
 
-  for (i = 0; i < 15; i++) {
+  while (1)
+  {
+    for (int i = 1; i < 6; i++)
+    {
+      num1 = (num1 << 1) | 1 ;
 
-    for (j = 1; j < 16; j++){
-      vActual = j * 2;
-      sprintf(hex_integer, "0x%04X", vActual);
+      for (int j = 1; j < 6; j++)
+      {
+        if (j == 1)
+        {
+          valor = num1 * 2;
+        } else {
+          valor = valor * 2;
+        }
+        WRITE_GPIO(GPIO_LEDs, valor);
+      }
+      
 
-      WRITE_GPIO(GPIO_LEDs, hex_integer);
+      for (int k = 1; k < 6; k++)
+      {
+        valor = valor / 2;
+        WRITE_GPIO(GPIO_LEDs, valor);
+      }
+
     }
-    
-    for (k = 1; k < 16; k++){
-      vActual = j / 2;
-      sprintf(hex_integer, "0x%04X", vActual);
-
-      WRITE_GPIO(GPIO_LEDs, hex_integer);
-    }
-
   }
 
   return (0);
