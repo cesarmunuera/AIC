@@ -12,7 +12,6 @@
     (*(volatile unsigned *)dir) = (value); \
   }
 
-
 int main(void)
 {
   int En_Value = 0xFFFF;
@@ -38,7 +37,6 @@ int main(void)
         WRITE_GPIO(GPIO_LEDs, valor);
       }
       
-
       for (int k = 1; k < 6; k++)
       {
         valor = valor / 2;
