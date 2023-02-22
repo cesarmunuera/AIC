@@ -8,30 +8,28 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/home/dchaver/VM_SharedFolder/RVfpga_1-1/RVfpga/examples/Blinky/include",
-                "/home/dchaver/VM_SharedFolder/RVfpga_1-1/RVfpga/examples/Blinky/src",
-                "/home/dchaver/.platformio/packages/framework-wd-riscv-sdk/common/api_inc",
-                "/home/dchaver/.platformio/packages/framework-wd-riscv-sdk/psp/api_inc",
-                "/home/dchaver/.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1",
-                "/home/dchaver/.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1/bsp",
-                "/home/dchaver/.platformio/packages/tool-unity",
+                "/home/cesar/Escritorio/AIC/RVfpga/examples/Blinky/include",
+                "/home/cesar/Escritorio/AIC/RVfpga/examples/Blinky/src",
+                "/home/cesar/.platformio/packages/framework-wd-riscv-sdk/common/api_inc",
+                "/home/cesar/.platformio/packages/framework-wd-riscv-sdk/psp/api_inc",
+                "/home/cesar/.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1",
+                "/home/cesar/.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1/bsp",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/home/dchaver/VM_SharedFolder/RVfpga_1-1/RVfpga/examples/Blinky/include",
-                    "/home/dchaver/VM_SharedFolder/RVfpga_1-1/RVfpga/examples/Blinky/src",
-                    "/home/dchaver/.platformio/packages/framework-wd-riscv-sdk/common/api_inc",
-                    "/home/dchaver/.platformio/packages/framework-wd-riscv-sdk/psp/api_inc",
-                    "/home/dchaver/.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1",
-                    "/home/dchaver/.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1/bsp",
-                    "/home/dchaver/.platformio/packages/tool-unity",
+                    "/home/cesar/Escritorio/AIC/RVfpga/examples/Blinky/include",
+                    "/home/cesar/Escritorio/AIC/RVfpga/examples/Blinky/src",
+                    "/home/cesar/.platformio/packages/framework-wd-riscv-sdk/common/api_inc",
+                    "/home/cesar/.platformio/packages/framework-wd-riscv-sdk/psp/api_inc",
+                    "/home/cesar/.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1",
+                    "/home/cesar/.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1/bsp",
                     ""
                 ]
             },
             "defines": [
-                "PLATFORMIO=50101",
+                "PLATFORMIO=60106",
                 "D_NEXYS_A7",
                 "D_SWERV_EH1",
                 "D_TICK_TIME_MS=4",
@@ -54,7 +52,7 @@
                 "sys/cdefs.h",
                 ""
             ],
-            "compilerPath": "/home/dchaver/.platformio/packages/toolchain-riscv/bin/riscv64-unknown-elf-gcc",
+            "compilerPath": "/home/cesar/.platformio/packages/toolchain-riscv/bin/riscv64-unknown-elf-gcc",
             "compilerArgs": [
                 "-march=rv32imac",
                 "-mabi=ilp32",
