@@ -12,11 +12,11 @@ Este codigo lo pensamos para poder debug fuera del lab, hasrdcodeando
 
 
 main:
-  li t0, 0x80001400   # En t0 guardamos GPIO_SWs
+  li t0, 0x80001400   # En t0 guardamos la direccion GPIO_SWs
   li t1, 0xFFFF       # En t1 guardamos FFFF
                       # upper half = switches (inputs)  (=0)
                       # lower half = outputs (LEDs)     (=1)
-  li t0, 0x80001404
+  li t0, 0x80001404   # Hardcodeamos el dato
   sw t1, 0(t0)        # Desplazamos 8 en hex a t0 (llega a GPIO_INOUT), y le metemos t1
 
 repeat:
