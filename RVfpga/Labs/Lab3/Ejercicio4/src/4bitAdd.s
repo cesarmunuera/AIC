@@ -14,8 +14,7 @@ main:
 
 
 # Guardamos en t2 el valor del switch
-# lw t0, t2
-li t2, 0x200F0000
+lw t2, 0(t0)
 li t4, 0xF0000000
 
 # Guardamos en t3 los 4 bits mas altos
