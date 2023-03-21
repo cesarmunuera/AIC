@@ -19,9 +19,9 @@ int main ( void )
   while (1) { 
     switches_val = getSwitchesVal();
     writeValtoLEDs(switches_val);
-    delay(20000000);
-    writeValtoLEDs(0x0000);
-    delay(20000000);
+    delay(20000000);  // Delay para que se vea el valor en los leds
+    writeValtoLEDs(0x0000); // Apagamos los leds
+    delay(20000000);  // Delay para mantenerlos apagados un tiempo
   }
 
   return(0);
@@ -49,5 +49,8 @@ void writeValtoLEDs(unsigned int val)
 }
 
 void delay(int num){
+    // Esta funcion es simplemente un bucle del tamaño del delay que se le pase
+    // como parametro. Como el for no hace nada, para que el compilador no se lo
+    // salte, hay que añadir la instrucción volatile al int.
     for(int volatile i = 1; i < num; i++){}
 }
