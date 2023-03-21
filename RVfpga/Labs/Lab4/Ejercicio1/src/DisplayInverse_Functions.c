@@ -36,7 +36,8 @@ unsigned int getSwitchesInvert()
   val = READ_GPIO(GPIO_SWs);   // read value on switche        
   val = val >> 16;  // shift into lower 16 bits
 
-  return ~val;
+  return ~val;  // Este es la unica modificacion al codigo, un inversor
+  // De esta forma, retornará el valor contrario al que se ha introducido
 }
 
 void writeValtoLEDs(unsigned int val)
