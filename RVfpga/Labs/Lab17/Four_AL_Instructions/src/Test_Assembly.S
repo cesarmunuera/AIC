@@ -33,14 +33,14 @@ add t2, t2, 0x240
 
 REPEAT:
   add t0, t0, 1
-  INSERT_NOPS_10
-  INSERT_NOPS_4
+  # INSERT_NOPS_10
+  # INSERT_NOPS_4
   add t3, t3, t1        
   sub t4, t4, t1
   or  t5, t5, t1        
   xor t6, t6, t1
-  INSERT_NOPS_10
-  INSERT_NOPS_3
+  # INSERT_NOPS_10
+  # INSERT_NOPS_3
   bne t0, t2, REPEAT # Repeat the loop
 
 .end
